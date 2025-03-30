@@ -1,0 +1,12 @@
+[Unit]
+Description=Iniciar ambiente Corradi com uWSGI
+After=network.target
+
+[Service]
+Type=simple
+User=corradi
+ExecStart=/home/corradi/start_corradi.sh
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
